@@ -36,9 +36,9 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # Security tools
-  gem 'brakeman'
-  gem 'bundler-audit'
-  gem 'ruby_audit'
+  gem "brakeman"
+  gem "bundler-audit"
+  gem "ruby_audit"
   # Database
   # Linting
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -58,5 +58,4 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-
 end
