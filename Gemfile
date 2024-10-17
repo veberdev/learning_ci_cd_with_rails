@@ -40,16 +40,13 @@ group :development, :test do
   gem 'bundler-audit'
   gem 'ruby_audit'
   # Database
-  gem 'pg'
   # Linting
-  gem 'rubocop'
-  gem 'rubocop-rails'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
-  # gem "rubocop-rails-omakase", require: false
+  gem "rubocop-rails-omakase", require: false
 end
 
 group :development do
