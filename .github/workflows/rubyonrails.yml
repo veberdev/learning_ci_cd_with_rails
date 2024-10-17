@@ -19,12 +19,12 @@ jobs:
         ports:
           - "5432:5432"
         env:
-          POSTGRES_DB: learning_ci_cd_with_rails_development
+          POSTGRES_DB: learning_ci_cd_with_rails_test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
     env:
       RAILS_ENV: test
-      DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
+      DATABASE_URL: "postgres://postgres:postgres@localhost:5432/learning_ci_cd_with_rails_test"
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -58,3 +58,5 @@ jobs:
         run: bundle exec brakeman -q -w2
       - name: Lint Ruby files
         run: bundle exec rubocop --parallel
+      - name: Automated Tests
+        run: bundle exec rspec
